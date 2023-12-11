@@ -22,23 +22,18 @@ public class PersonaService implements InPersonaService{
 
 	@Override
 	public Optional<Persona> listarId(int id) {
-		// TODO Auto-generated method stub
-		return Optional.empty();
+		return data.findById(id);
 	}
 
 	@Override
 	public int save(Persona p) {
-		// TODO Auto-generated method stub
-		return 0;
+	    Persona savedPersona = data.save(p);
+	    return savedPersona.getId();
 	}
 
 	@Override
 	public void delete(int id) {
-		// TODO Auto-generated method stub
 		
 	}
-
-	
-	
 	
 }
